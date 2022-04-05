@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Profil</h1>
+    <h2>Hier konnen Sie Ihre Adress-Angaben einsehen und anpassen</h2>
+    <hr />
+    <form method="post">
+      <h3>Personliche Daten</h3>
+      <label for="titel">Titel</label>
+      <input id="titel" type="text" placeholder="Dr.hc" /> <br /><br />
+      <label for="vorname">Vorname</label>
+      <input type="text" id="vorname" placeholder="Peter" /> <br /><br />
+      <label for="nachname">Nachname</label>
+      <input type="text" id="nachname" placeholder="Muster" /> <br /><br />
+      <label>Geschlecht</label>
+      <input type="radio" />
+      <input type="radio" />
+      <br /><br />
+      <label>Sprache</label>
+      <input type="radio" name="sprache" />
+      <input type="radio" name="sprache" />
+      <input type="radio" name="sprache" />
+      <br /><br />
+      <hr />
+      <h3>Kontaktdaten</h3>
+      <label for="telefon">Telefon</label>
+      <input id="telefon" type="tel" placeholder="optional" /> <br /><br />
+      <label for="mobile">Mobile</label> <input id="mobile" type="tel" />
+      <br /><br />
+      <label for="hauptnummer">Hauptnummer</label>
+      <input id="hauptnummer" type="tel" placeholder="optional" /> <br /><br />
+      <label for="fax">Fax</label>
+      <input type="tel" id="fax" placeholder="optional" /> <br /><br />
+      <label for="mail1">Mail 1</label> <input id="mail1" type="email" />
+      <br /><br />
+      <label for="mail2">Mail 2</label>
+      <input type="email" id="mail2" placeholder="optional" /> <br /><br />
+      <hr />
+      <h3>Adressdaten</h3>
+      <label for="firma">Firma</label> <input id="firma" type="text" />
+      <br /><br />
+      <label for="zusats">Zusatz Firma</label>
+      <input type="tel" id="zusats" placeholder="optional" /> <br /><br />
+      <label for="homepage">Homepage</label>
+      <input type="url" id="homepage" placeholder="optional" /> <br /><br />
+      <label>Adress/Haus Nr</label>
+      <input type="text" placeholder="Musterstrasse" />
+      <input type="number" placeholder="33" /> <br /><br />
+      <label for="zasatsaddress">Zusats Adresse</label>
+      <input type="text" id="zasatsaddress" placeholder="optional" />
+      <br /><br />
+      <label for="postfact">Postfach</label>
+      <input type="text" id="postfact" placeholder="optional" /> <br /><br />
+      <label>PLZ/ Ort</label> <input type="number" placeholder="8080" />
+      <input type="text" placeholder="Musterstandt" /> <br /><br />
+      <label>Kanton/ Land</label> <input type="text" placeholder="ZH" />
+      <input type="text" placeholder="Schweiz" /> <br /><br />
+      <button>Speichern</button>
+    </form>
+  </body>
+</html>
