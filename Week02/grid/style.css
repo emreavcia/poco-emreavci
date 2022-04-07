@@ -22,3 +22,11 @@
 .box6 {
   background: slategrey;
 }
+
+/*
+grid
+*/
+
+.container {
+  display: grid;
+}
