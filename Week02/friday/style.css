@@ -1,0 +1,23 @@
+.container {
+  background-color: aqua;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+li {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  margin: 3px;
+  padding: 3px 8px;
+}
+
+.stretch {
+  flex: 1;
+  background-color: rgb(65, 46, 145);
+  text-align: center;
+}
