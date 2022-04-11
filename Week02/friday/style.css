@@ -1,23 +1,18 @@
-.container {
-  background-color: aqua;
+body {
+  position: relative;
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
+.loading-text {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 50px;
+  color: black;
 }
 
-li {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  margin: 3px;
-  padding: 3px 8px;
-}
-
-.stretch {
-  flex: 1;
-  background-color: rgb(65, 46, 145);
-  text-align: center;
+div:not(.loading-text) {
+  z-index: 0;
+  filter: blur(50px);
 }
