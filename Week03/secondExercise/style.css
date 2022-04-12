@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat@1&display=swap");
+
+header {
+  background-color: #d2e7f2;
+  padding: 0.8em 4em;
+}
+nav {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 2.5vw;
+  color: #3e3e3e;
+}
+
+span {
+  display: inline-block;
+  width: 20px;
+  height: 2.5px;
+  background-color: black;
+  position: relative;
+  border-radius: 10px;
+  display: none;
+}
+
+span::before,
+span::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  border-radius: 10px;
+}
+
+span::before {
+  top: 5px;
+}
+span::after {
+  top: -5px;
+}
+
+input {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  header {
+    position: relative;
+    height: 100%;
+    padding-top: 0;
+  }
+
+  nav {
+    position: absolute;
+    width: 0;
+  }
+
+  ul {
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: flex-start;
+    background-color: #d2e7f2;
+    margin-right: 4em;
+  }
+
+  li {
+    margin: 1em 1em;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    right: 2em;
+    top: 0.8em;
+  }
+  input {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    right: 2.15em;
+    top: 0.3em;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  header {
+    background-color: white;
+  }
+
+  input:checked ~ span {
+    background-color: transparent;
+  }
+  input:checked ~ span::before {
+    transform: translateY(-4.75px) rotate(45deg);
+    opacity: 1;
+  }
+  input:checked ~ span::after {
+    transform: translateY(4.75px) rotate(-45deg);
+    opacity: 1;
+  }
+
+  input:checked ~ nav {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    background-color: #d2e7f2;
+    right: 0;
+    transition: right 1s ease-in-out;
+  }
+
+  input:not(:checked) ~ nav {
+    transition: right 1s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    background-color: #d2e7f2;
+    right: -30%;
+    transition: right 1s ease-in-out;
+  }
+}
