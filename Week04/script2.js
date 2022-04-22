@@ -78,3 +78,34 @@ for (let i = 1; i < numberList.length; i++) {
 }
 
 document.write(sum) */
+
+
+const numberList = [3, 2, 1]
+
+console.time()
+
+for (let index = 0; index < numberList.length; index++) {
+
+    if (numberList[index] > numberList[index + 1]) {
+        let temp = numberList[index]
+        numberList[index] = numberList[index + 1]
+        numberList[index + 1] = temp
+    }
+
+    for (let i = 0; i < numberList.length; i++) {
+        let temp = numberList[i]
+        if (numberList[i] > numberList[i + 1]) {
+            numberList[i] = numberList[i + 1]
+            numberList[i + 1] = temp
+        }
+
+
+    }
+}
+
+console.time()
+
+numberList.sort((a, b) => a - b)
+console.timeEnd()
+
+
