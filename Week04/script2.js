@@ -80,7 +80,7 @@ for (let i = 1; i < numberList.length; i++) {
 document.write(sum) */
 
 
-const numberList = [3, 2, 1]
+/* const numberList = [3, 2, 1]
 
 console.time()
 
@@ -98,14 +98,14 @@ for (let index = 0; index < numberList.length; index++) {
             numberList[i] = numberList[i + 1]
             numberList[i + 1] = temp
         }
-
-
     }
 }
 
 console.time()
 
 numberList.sort((a, b) => a - b)
-console.timeEnd()
-
+console.timeEnd() */
+/* 
+var fname = "emre"
+console.log(fname.length) */
 
