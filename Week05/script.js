@@ -25,7 +25,7 @@ const findGCD = function (pIntegerFirst, pIntegerSecond) {
 
 //Second exercise
 
-const findTheGreaterNumber = function (pFirstNumber, pSecondNumber) {
+const findGreaterNumber = function (pFirstNumber, pSecondNumber) {
     if (pFirstNumber > pSecondNumber) {
         console.log(`The greater number of ${pSecondNumber} and ${pFirstNumber} is ${pFirstNumber}.`)
     } else if (pSecondNumber > pFirstNumber) {
@@ -36,3 +36,31 @@ const findTheGreaterNumber = function (pFirstNumber, pSecondNumber) {
 }
 
 //Third exercise
+
+const helloWorld = function (pLanguageCode = "en") {
+    if (pLanguageCode === "en") {
+        return "Hello, World"
+    } else if (pLanguageCode === "es") {
+        return "Ola, Mondo"
+    } else if (pLanguageCode === "de") {
+        return "Hallo, Welt"
+    } else {
+        return "The language code you entered is not valid"
+    }
+}
+
+console.log(helloWorld("de"))
+
+
+//fourth exercise
+
+const calcRetairementAge = function () {
+    const currentAge = prompt("What is your age",)
+    const retairementAgeYouLike = prompt("At what age would you like to retire",)
+    const yearsLeft = `You have ${retairementAgeYouLike - currentAge} years left until you can retire`
+    const yearsOfRetairement = `It's 2022, so you can retire in ${2022 + (retairementAgeYouLike - currentAge)}.`
+    console.log(yearsLeft)
+    console.log(yearsOfRetairement)
+}
+
+calcRetairementAge()

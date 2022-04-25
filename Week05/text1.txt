@@ -1,0 +1,5 @@
+inputs : current age, retairement age, current year
+outputs: age of retairement, the year of the retairement, years to work
+Constraints: 
+            1.current year cannot be less than 2022
+            2.current age cannot be less than 0

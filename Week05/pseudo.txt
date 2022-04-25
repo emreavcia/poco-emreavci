@@ -1,0 +1,6 @@
+#create a function
+#promt from the user the current age
+#promt from the user the retairement age the user likes
+#retairement age minus current age to find years to retairement
+#add retairement year to 2022 to find the year the user retaires
+#return "It's 2020, so you can retire in ${retirement year}".
