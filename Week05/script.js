@@ -1,3 +1,5 @@
+//First exercise 
+
 const findGCD = function (pIntegerFirst, pIntegerSecond) {
 
     let range = 0;
@@ -21,4 +23,16 @@ const findGCD = function (pIntegerFirst, pIntegerSecond) {
     return maxNumber
 }
 
-console.log(findGCD(878, 700))
+//Second exercise
+
+const findTheGreaterNumber = function (pFirstNumber, pSecondNumber) {
+    if (pFirstNumber > pSecondNumber) {
+        console.log(`The greater number of ${pSecondNumber} and ${pFirstNumber} is ${pFirstNumber}.`)
+    } else if (pSecondNumber > pFirstNumber) {
+        console.log(`The greater number of ${pFirstNumber} and ${pSecondNumber} is ${pSecondNumber}.`)
+    } else {
+        console.log(`Numbers are equal`)
+    }
+}
+
+//Third exercise
