@@ -49,10 +49,9 @@ const helloWorld = function (pLanguageCode = "en") {
     }
 }
 
-console.log(helloWorld("de"))
 
 
-//fourth exercise
+//forth exercise
 
 const calcRetairementAge = function () {
     const currentAge = prompt("What is your age",)
@@ -63,4 +62,17 @@ const calcRetairementAge = function () {
     console.log(yearsOfRetairement)
 }
 
-calcRetairementAge()
+
+
+//Object Constructor Function
+function Person(name, age, married) {
+    this.name = name;
+    this.age = age;
+    this.married = married;
+    this.hello = function () {
+        return `Hello, ${this.name}`
+    }
+}
+
+const person1 = new Person("Emre", 32, true)
+console.log(person1.hello())
