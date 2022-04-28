@@ -1,4 +1,4 @@
-//First exercise 
+/* //First exercise 
 
 const findGCD = function (pIntegerFirst, pIntegerSecond) {
 
@@ -68,11 +68,103 @@ const calcRetairementAge = function () {
 function Person(name, age, married) {
     this.name = name;
     this.age = age;
-    this.married = married;
+    this.isMarried = married;
     this.hello = function () {
         return `Hello, ${this.name}`
     }
 }
 
 const person1 = new Person("Emre", 32, true)
-console.log(person1.hello())
+
+
+// arrays 
+const t1 = ["HTML", "CSS"]
+const t2 = ["JS", "Node.js"]
+const conbined = t1.concat(t2)
+
+// Mad LIB 
+/* const noun = prompt("enter a noun")
+const verb = prompt("enter a verb")
+const adverb = prompt("enter an adverb")
+const adjective = prompt("enter an adjective")
+
+let myObject = {
+    noun: noun,
+    verb: verb,
+    adverb: adverb,
+    adjective: adjective,
+}
+
+console.log(myObject) */
+
+/* 
+const myList = [
+    {
+        numberOfChidren: 1,
+        partnersName: "Daria",
+        geographicLocation: "New York",
+        jobTitle: "Developer"
+    },
+    {
+        numberOfChidren: 5,
+        partnersName: "Teya",
+        geographicLocation: "Lugan",
+        jobTitle: "Medical Doctor"
+    },
+    {
+        numberOfChidren: 6,
+        partnersName: "Shane",
+        geographicLocation: "Ankara",
+        jobTitle: "Manager"
+    },
+]
+
+function fortunaTeller(item) {
+    document.write(`You will be a ${item.jobTitle} in ${item.geographicLocation}, and married to ${item.partnersName} with ${item.numberOfChidren} ${item.numberOfChidren === 1 ? "kid" : "kids"}.`)
+}
+
+fortunaTeller(myList[2])
+ */
+
+//const myArray = ["red", "blue", "brown", "orange", "brown", "orange"]
+/* 
+for (let a = 0; a < myArray.length; a++) {
+
+    if (a === 0) {
+        console.log(`My ${a + 1}st choice is ${myArray[a]}`)
+    } else if (a === 1) {
+        console.log(`My ${a + 1}nd choice is ${myArray[a]}`)
+    } else if (a === 2) {
+        console.log(`My ${a + 1}rd choice is ${myArray[a]}`)
+    } else if (a >= 3) {
+        console.log(`My ${a + 1}th choice is ${myArray[a]}`)
+    }
+}
+ */
+
+/* let x = 0;
+
+while (x <= 3) {
+    x * 5
+    x++
+} */
+
+
+/* 
+const myArray = ["red", "blue", "brown", "orange"]
+myArray.forEach((item, index) => console.log(`My ${index + 1}# choice is ${item}`)) */
+
+const myArray = ["red", "blue", "brown", "orange"]
+
+
+document.getElementById("root").innerHTML = `
+<ul>
+${myArray.map(item => {
+    return (`
+     <li>${item}</li>
+    `)
+}).join("")}
+</ul>
+`
+
+
