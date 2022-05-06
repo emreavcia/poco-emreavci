@@ -26,4 +26,22 @@ main {
   border-radius: 5px;
   margin-bottom: 0.5em;
   color: white;
+  width: 17em;
+  height: 2em;
+}
+
+input[type="text"] {
+  border: 1px solid blue;
+  border-radius: 3px;
+  width: 15em;
+  height: 2em;
+}
+
+button {
+  margin-left: 1em;
+  padding: 0.3em 1em;
+  margin-bottom: 1em;
+  background-color: coral;
+  border: 1px solid blue;
+  border-radius: 3px;
 }

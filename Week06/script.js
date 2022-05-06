@@ -17,14 +17,17 @@ const handleChange = (e) => {
 
 const renderContent = (pArray) => {
 
-    ol.innerHTML = pArray.map((item, index) => {
+    content = pArray.map((item, index) => {
         return `
         <li class="list-item">
-        <input type="checkbox" ${item.isDone && "checked"} onchange= "handleChange(event)" name="todo${index}" id="${item.id}" />
-        <label style=${item.isDone && "text-decoration:line-through"} for="${item.id}">${item.text}</label>
-      </li>
+            <input required type="checkbox" ${item.isDone && "checked"} onchange= "handleChange(event)" name="todo${index}" id="${item.id}" />
+            <label style=${item.isDone && "text-decoration:line-through"} for="${item.id}">${item.text}</label>
+        </li>
         `
     }).join("")
+
+    ol.innerHTML = content
+
 }
 
 renderContent(todos)
@@ -37,19 +40,13 @@ btn.addEventListener("click", () => {
 
     id = todos.length == 0 ? id = 1 : id = todos[todos.length - 1].id + 1
 
-    const newItem = {
-        id,
-        text,
-        isDone: false
+    if (text) {
+        const newItem = {
+            id,
+            text,
+            isDone: false
+        }
+        todos = [...todos, newItem]
+        renderContent(todos)
     }
-
-    todos = [...todos, newItem]
-    renderContent(todos)
 })
-
-
-
-
-
-
-
