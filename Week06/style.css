@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins;
+}
+
+header {
+  margin: 0 15em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: coral;
+}
+
+main {
+  margin: 0 15em;
+}
+
+.list-item {
+  background-color: blue;
+  padding: 0.4em 0.4em 0.1em 0.4em;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+  color: white;
+}
