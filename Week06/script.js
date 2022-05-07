@@ -38,22 +38,23 @@ renderContent(todos)
 // event listener for submit button
 btn.addEventListener("click", () => {
 
-    const text = input.value
+    const text = input.value.trim()
     let id = 0;
 
     id = todos.length == 0 ? id = 1 : id = todos[todos.length - 1].id + 1
 
     // validate if the input value isn't empty  
-    if (text) {
+    if (text && todos.some(item => item.text.toLowerCase() !== text.trim().toLowerCase() && item.isDone === true)) {
         const newItem = {
             id,
             text,
             isDone: false
         }
-        // add new to do to the todo lists
+        // add new to do to the todo list
         todos = [...todos, newItem]
-
-        // render the content evertime the new to do added 
-        renderContent(todos)
+    } else {
+        alert("either the item is empty or it is already in the list")
     }
+    // render the content everytime the new todo added 
+    renderContent(todos)
 })
