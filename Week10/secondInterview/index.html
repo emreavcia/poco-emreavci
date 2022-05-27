@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -12,21 +11,25 @@
       integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR"
       crossorigin="anonymous"
     />
-
     <title>News</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <main class="container">
-      <h1>News</h1>
+    <header>
+      <div class="container">
+        <h1>ABC & DEF News</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="search-area">
+        <!-- <label for="input">Search for the news</label> -->
+        <input type="text" id="input" placeholder="enter key words" />
+        <button type="button" class="btn" id="btn">Search News</button>
+      </section>
       <hr />
-      <label for="input">Search for the news</label>
-      <br />
-      <br />
-      <input type="text" id="input" />
-      <br />
-      <br />
-      <button id="btn">search</button>
-      <div id="news_items"></div>
+      <section class="container" id="news_items"></section>
     </main>
     <script src="script.js"></script>
   </body>
