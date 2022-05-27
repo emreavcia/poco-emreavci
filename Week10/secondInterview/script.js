@@ -1,50 +1,18 @@
-const div = document.getElementById("news_items")
-const button = document.getElementById("btn")
-const input = document.getElementById("input")
-function getNews(pQuery) {
-    fetch(`https://newsapi.org/v2/everything?q=${pQuery}&from=2022-04-27&sortBy=popularity&apiKey=9a6a1ddd50a3475aacf5426f4a981555`)
+const select = document.getElementById("select")
+const div = document.getElementById("div")
+function getData(pCity) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${pCity}&units=metric&APPID=6bae8826f84c726e47e7e7351a9ee669`)
         .then(response => response.json())
         .then(data => renderContent(data))
 }
-button.addEventListener("click", () => {
-    let valueInput = input.value
-    getNews(valueInput)
-    input.value = ""
-})
+select.onchange = () => {
+    getData(select.value)
+}
 function renderContent(data) {
-    div.innerHTML = data.articles.map(data => {
-        return (
-            `
-        <h2 class="col-12 text-center mb-4 mt-4">${data.title}</h2>
-        <section class="row">
-            <section class="col-12 col-md-6 mt-1 mb-2">
-                <h3>
-                ${data.content}
-                </h3>
-                <p>
-                ${data.description}
-                </p>
-            
-                <h3>Svetlana Ekimenko</h3>
-                <a${data.url}>
-                    click here to reach the full content
-                </a>
-            </section>
-            <section class="col-12 col-md-6">
-                <img
-                src=${data.urlToImage}
-                alt=""
-                />
-            </section>
-        </section>
-        <footer class="col"> 
-            <p>${data.publishedAt}</p>
-            <p>
-            ${data.content}
-            </p>
-        </footer>
-        <hr/>
-            `
-        )
-    }).join("")
+    const icon = data.weather[0].icon
+    div.innerHTML = `
+    <h1> ${data.name}</h1>
+    <h2>${Math.round(data.main.temp)} &#8451;  </h2>
+    <img src=${`http://openweathermap.org/img/wn/${icon}@2x.png`} alt=""/>
+    `
 }

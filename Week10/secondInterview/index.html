@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
     />
-    <title>News</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Weather API</title>
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <h1>ABC & DEF News</h1>
-      </div>
-    </header>
-
-    <main>
-      <section class="search-area">
-        <!-- <label for="input">Search for the news</label> -->
-        <input type="text" id="input" placeholder="enter key words" />
-        <button type="button" class="btn" id="btn">Search News</button>
-      </section>
+    <main class="">
+      <header></header>
+      <section></section>
+      <h1 class="mt-5">Weather Teller</h1>
       <hr />
-      <section class="container" id="news_items"></section>
+      <h2>Select a city</h2>
+      <br />
+      <select class="form-select" id="select">
+        <option selected>Select a city</option>
+        <option value="London,uk">London</option>
+
+        <option value="Zurich,Europe">Zurich</option>
+        <option value="Berlin,Europe">Berlin</option>
+        <option value="Prag,Europe">Prag</option>
+      </select>
+      <br />
+      <div id="div"></div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
