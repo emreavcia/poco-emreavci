@@ -1,0 +1,3 @@
+function main(currentTime) {
+    window
+}
